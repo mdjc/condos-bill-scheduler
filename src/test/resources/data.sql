@@ -6,14 +6,14 @@ insert into users (username, password, role)  values('aldo', '$2a$10$nZAnnVBnl0r
 insert into users (username, password, role)  values('john', '$2a$10$nZAnnVBnl0r23Iii2FBUPOJNcCFL9x9MakFDdlzw2vbN5tUeWcHui', 'RESIDENT');
 insert into users (username, password, role)  values('mary', '$2a$10$nZAnnVBnl0r23Iii2FBUPOJNcCFL9x9MakFDdlzw2vbN5tUeWcHui', 'RESIDENT');
 
-insert into condos (name, manager, balance, billing_day_of_month) values ('Shadai I', (select id from users where username='mirna' and role='MANAGER'), 100, 15);
-insert into condos (name, manager, balance, billing_day_of_month) values ('Loring  Place 2333', (select id from users where username='mirna' and role='MANAGER'), 50, 1);
-insert into condos (name, manager, balance, billing_day_of_month) values ('Mira Flores IV', (select id from users where username='luis' and role='MANAGER'), 220, 1);
-insert into condos (name, manager, balance, billing_day_of_month) values('Baldwing IV', (select id from users where username='luis' and role='MANAGER'), 0, 1);
-insert into condos (name, manager, balance, billing_day_of_month) values('Baldwing V', (select id from users where username='luis' and role='MANAGER'), 0, 28);
-insert into condos (name, manager, balance, billing_day_of_month) values('Baldwing VI', (select id from users where username='luis' and role='MANAGER'), 0, 29);
-insert into condos (name, manager, balance, billing_day_of_month) values('Baldwing VII', (select id from users where username='luis' and role='MANAGER'), 0, 30);
-insert into condos (name, manager, balance, billing_day_of_month) values('Baldwing VIII', (select id from users where username='luis' and role='MANAGER'), 0, 31);
+insert into condos (name, manager, balance, billing_day_of_month, address, contact_name, contact_phone, img_extension) values ('Shadai I', (select id from users where username='mirna' and role='MANAGER'), 100, 15, 'Calle Bartolo #15, Santo Domingo', 'juan', '8096169980', 'JPG');
+insert into condos (name, manager, balance, billing_day_of_month, address, contact_name, contact_phone) values ('Loring  Place 2333', (select id from users where username='mirna' and role='MANAGER'), 50, 1, 'Calle Bartolo #16, Santo Domingo', 'pedro', '8096169980');
+insert into condos (name, manager, balance, billing_day_of_month, address, contact_name, contact_phone) values ('Mira Flores IV', (select id from users where username='luis' and role='MANAGER'), 220, 1, 'Calle Bartolo #17, Santo Domingo', 'maria', '8096169980');
+insert into condos (name, manager, balance, billing_day_of_month, address, contact_name, contact_phone) values('Baldwing IV', (select id from users where username='luis' and role='MANAGER'), 0, 1, 'Calle Bartolo #18, Santo Domingo', 'jose', '8096169980');
+insert into condos (name, manager, balance, billing_day_of_month, address, contact_name, contact_phone) values('Baldwing V', (select id from users where username='luis' and role='MANAGER'), 0, 28, 'Calle Bartolo #19, Santo Domingo', 'jose', '8096169980');
+insert into condos (name, manager, balance, billing_day_of_month, address, contact_name, contact_phone) values('Baldwing VI', (select id from users where username='luis' and role='MANAGER'), 0, 29, 'Calle Bartolo #20, Santo Domingo', 'jose', '8096169980');
+insert into condos (name, manager, balance, billing_day_of_month, address, contact_name, contact_phone) values('Baldwing VII', (select id from users where username='luis' and role='MANAGER'), 0, 30, 'Calle Bartolo #21, Santo Domingo', 'jose', '8096169980');
+insert into condos (name, manager, balance, billing_day_of_month, address, contact_name, contact_phone) values('Baldwing VIII', (select id from users where username='luis' and role='MANAGER'), 0, 31, 'Calle Bartolo #22, Santo Domingo', 'jose', '8096169980');
 
 insert into apartments (name, condo, resident, monthly_share) values ('1A', (select id from condos where name = 'Shadai I'), (select id from users where username='virgi'), 10);
 insert into apartments (name, condo, resident, monthly_share) values ('1B', (select id from condos where name = 'Shadai I'), null, 10);

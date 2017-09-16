@@ -11,6 +11,10 @@ create table condos (
 	manager int not null,
 	balance double not null default 0,
 	billing_day_of_month int,
+	address varchar(70) not null,
+	contact_name varchar(40),
+	contact_phone char(10),
+	img_extension char(3),
 	foreign	key (manager) references users(id)
 );
 
